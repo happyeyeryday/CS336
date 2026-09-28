@@ -1,0 +1,14 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.pdf binary
+*.pt binary
+*.pkl binary
+*.npz binary
+# Tokenizer fixtures contain meaningful whitespace and exact byte sequences.
+**/tests/fixtures/** -text -whitespace

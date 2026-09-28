@@ -1,0 +1,8 @@
+[project]
+name = "cs336-flashattention-study"
+version = "0.1.0"
+requires-python = ">=3.11,<3.14"
+dependencies = ["torch~=2.6.0", "triton==3.2.0; sys_platform == 'linux'", "einops==0.8.1"]
+
+[tool.uv]
+package = false

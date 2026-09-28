@@ -1,0 +1,4 @@
+the small model learns from a short story
+the curious student reads the story and trains the model
+a small model can learn a short story
+the student shares code and learns with a friend

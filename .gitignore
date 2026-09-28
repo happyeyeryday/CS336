@@ -1,0 +1,21 @@
+# Environments and generated files; test fixtures are intentionally tracked.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+!.env.example
+**/data/
+**/outputs/
+**/checkpoints/
+**/wandb/
+**/cs336_data/assets/
+*.log
+*.zip
+.DS_Store

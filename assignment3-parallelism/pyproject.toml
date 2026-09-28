@@ -1,0 +1,29 @@
+[project]
+name = "cs336-parallelism-study"
+version = "0.1.0"
+requires-python = ">=3.11,<3.14"
+dependencies = ["torch~=2.6.0", "numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+cpu = ["torch"]
+cu124 = ["torch"]
+
+[tool.uv]
+package = false
+conflicts = [[{ extra = "cpu" }, { extra = "cu124" }]]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu", extra = "cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+  { index = "pytorch-cu124", extra = "cu124", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
